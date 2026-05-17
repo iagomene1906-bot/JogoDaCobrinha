@@ -12,8 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\Senaisp\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Senaisp\\.nuget\\packages",
+      "C:\\Users\\Façaporonde\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Façaporonde\\.nuget\\packages",
       "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
     ],
     "configProperties": {

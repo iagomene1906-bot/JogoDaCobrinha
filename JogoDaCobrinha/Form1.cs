@@ -79,7 +79,7 @@ namespace JogoDaCobrinha
             this.StartPosition = FormStartPosition.CenterScreen;
 
             // cor de fundo da janela
-            this.BackColor = Color.Black; // preto
+            this.BackColor = Color.Green; // verde
 
             // Evita piscadas durante a renderização (renderizar -> mostrar na tela)
             this.DoubleBuffered = true;
@@ -108,7 +108,7 @@ namespace JogoDaCobrinha
             bool bateuNoCorpo = cobrinha.BateuNoProprioCorpo(novaPosicaoDaCabeca);
 
             // se bateu em algo
-            if(bateuNaParede || bateuNoCorpo)
+            if (bateuNaParede || bateuNoCorpo)
             {
                 // Finaliza o jogo
                 FinalizarJogo();
@@ -124,7 +124,7 @@ namespace JogoDaCobrinha
             cobrinha.Mover(novaPosicaoDaCabeca, comeuComida);
 
             // se comeu a comida
-            if(comeuComida)
+            if (comeuComida)
             {
                 // aumenta a pontuação
                 pontuacao++;
@@ -152,7 +152,7 @@ namespace JogoDaCobrinha
 
             // METODO DE DESENHO DA COMIDA
             DesenharComida(tela);
-        } 
+        }
 
         // Desenhar pontuação
         private void DesenharPontuacao(Graphics tela)
@@ -179,13 +179,13 @@ namespace JogoDaCobrinha
         private void DesenharCobrinha(Graphics tela)
         {
             // percorre todas as partes do corpo
-            foreach(Point parteDoCorpo in cobrinha.PartesDoCorpo)
+            foreach (Point parteDoCorpo in cobrinha.PartesDoCorpo)
             {
                 // desenha um retângulo para cada parte do corpo
                 tela.FillRectangle(
 
                     // cor da cobrinha
-                    Brushes.LimeGreen,
+                    Brushes.White,
 
                     // Posição X
                     parteDoCorpo.X * tamanhoDoBloco,
@@ -228,28 +228,28 @@ namespace JogoDaCobrinha
         private void DetectarTeclaPressionada(object sender, KeyEventArgs e)
         {
             // seta pra cima
-            if(e.KeyCode == Keys.Up)
+            if (e.KeyCode == Keys.Up)
             {
                 // 0 horizontal e -1 vertical
                 cobrinha.MudarDirecao(0, -1);
             }
 
             // seta para baixo
-            else if(e.KeyCode == Keys.Down)
+            else if (e.KeyCode == Keys.Down)
             {
                 // 0 horizontal e 1 vertical
                 cobrinha.MudarDirecao(0, 1);
             }
 
             // seta para esquerda
-            else if(e.KeyCode == Keys.Left)
+            else if (e.KeyCode == Keys.Left)
             {
                 // -1 horizontal e 0 vertical
                 cobrinha.MudarDirecao(-1, 0);
             }
 
             // seta para direita
-            else if(e.KeyCode == Keys.Right)
+            else if (e.KeyCode == Keys.Right)
             {
                 // 1 horizontal e 0 vertical
                 cobrinha.MudarDirecao(1, 0);
@@ -277,7 +277,7 @@ namespace JogoDaCobrinha
 
             // mostra mensagem final
             MessageBox.Show(
-                $"Fim de jogo!\nPontuação: {pontuacao}"    
+                $"Fim de jogo!\nPontuação: {pontuacao}"
             );
 
             // Reinicia o jogo
@@ -298,6 +298,11 @@ namespace JogoDaCobrinha
 
             // inicia o timer novamente
             temporizadorDoJogo.Start();
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
 
         }
     }
