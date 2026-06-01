@@ -33,7 +33,7 @@ Antes de começar, você vai precisar ter instalado em sua máquina a seguinte f
 ### Passos para rodar
 1. Clone este repositório:
 ```bash
-   git clone [https://github.com/iagomene1906-bot/JogoDaCobrinha.git](https://github.com/iagomene1906-bot/JogoDaCobrinha.git)
+   git clone https://github.com/iagomene1906-bot/JogoDaCobrinha.git
 ```
 2. Abra o arquivo da solução (`JogoDaCobrinha.sln`) no seu Visual Studio.
 3. No painel superior, certifique-se de que o projeto de inicialização está correto e clique em **Iniciar** (ou pressione `F5`).
